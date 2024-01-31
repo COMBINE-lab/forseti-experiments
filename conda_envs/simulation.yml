@@ -1,0 +1,15 @@
+name: simulation
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+  - anaconda
+dependencies:
+  - simpleaf 
+  - piscem
+  - pyroe
+  - biopython
+  - jupyter
+  - insilicoseq
+  - samtools
+  - star

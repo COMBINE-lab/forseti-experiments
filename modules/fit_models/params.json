@@ -1,0 +1,8 @@
+{   
+    "parent_dir": "/fs/nexus-projects/sc_frag_len/nextflow/workflow_output",
+    "PE_sheet": "/fs/nexus-projects/sc_frag_len/nextflow/input_files/sample_url_sheet.csv",
+    "outdir": "mlp_model",
+    "random_seed": 1,
+    "snr_len": 6,
+    "snr_mismatch": 1,
+}

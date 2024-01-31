@@ -1,0 +1,3 @@
+species,ref_name,genome_path,gtf_path
+Human,refdata-gex-GRCh38-2020-A,data/refs/refdata-gex-GRCh38-2020-A/fasta/genome.fa,data/refs/refdata-gex-GRCh38-2020-A/genes/genes.gtf
+Mouse,refdata-gex-mm10-2020-A,data/refs/refdata-gex-mm10-2020-A/fasta/genome.fa,data/refs/refdata-gex-mm10-2020-A/genes/genes.gtf

@@ -1,0 +1,28 @@
+name: ext_r1_env 
+channels:
+          - defaults
+          - conda-forge
+          - bioconda
+          - anaconda
+dependencies:
+          - python
+          - numpy
+          - pandas
+          - matplotlib
+          - star
+          - fastp
+          - seaborn
+          - samtools
+          - pysam
+          - pip
+          - tqdm
+          - dnaio
+          - biopython
+          - regex
+          - bedtools
+          - scikit-learn
+          - conda-forge::ncurses
+          - pyranges
+
+
+
