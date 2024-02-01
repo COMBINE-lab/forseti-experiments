@@ -1,6 +1,8 @@
 # forseti-experiments
 
-This repo includes the workflow pipeline used for generating the results in the manuscript "Forseti: A mechanistic and predictive model of the splicing status of scRNA-seq reads". The pipeline is implemented in Nextflow and you will need to have Nextflow installed in your system to run the pipeline. If not, please check https://www.nextflow.io/docs/latest/getstarted.html for details. The pipeline is designed to run on a SLURM cluster, but can be easily adapted to other cluster systems. 
+This repo includes the workflow pipeline used for generating the results in the manuscript "Forseti: A mechanistic and predictive model of the splicing status of scRNA-seq reads" (link coming soon). 
+
+The pipeline is implemented in Nextflow and you will need to have Nextflow installed in your system to run the pipeline. If not, please check https://www.nextflow.io/docs/latest/getstarted.html for details. The pipeline is designed to run on a SLURM cluster, but can be easily adapted to other cluster systems. 
 
 ## Introduction
 This workflow can be devided into six main steps:
