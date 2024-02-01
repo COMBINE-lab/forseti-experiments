@@ -9,7 +9,7 @@ dependencies:
           - numpy
           - pandas
           - matplotlib
-          - star
+          - star=2.7.11a-0
           - fastp
           - seaborn
           - samtools

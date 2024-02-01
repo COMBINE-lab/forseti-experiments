@@ -12,4 +12,4 @@ dependencies:
   - jupyter
   - insilicoseq
   - samtools
-  - star
+  - star=2.7.11a-0

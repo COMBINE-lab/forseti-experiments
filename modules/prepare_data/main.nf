@@ -1,6 +1,24 @@
 import groovy.json.JsonOutput
 
 
+process download_ref {
+    label 'r'
+    publishDir "$params.data_dir", mode: 'move'
+
+    output:
+        path "refs"
+    script:
+        """
+        mkdir refs
+        cd refs
+        wget -qO- https://cf.10xgenomics.com/supp/cell-exp/refdata-gex-GRCh38-2020-A.tar.gz | tar xzf -
+        rm -rf refdata-gex-GRCh38-2020-A/star
+        wget -qO- https://cf.10xgenomics.com/supp/cell-exp/refdata-gex-mm10-2020-A.tar.gz | tar xzf - 
+        rm -rf refdata-gex-mm10-2020-A/star
+        """
+
+}
+
 // build spliced + unspliced reference for each transcript. Here each isoform of each gene corresponds to two reference sequences, one is the spliced version, the concatenated exons, and the other is the unspliced version, the transcript body. The unspliced version of transcript has a single exon containing the transcript body.
 // Meanwhile, we will also find the polyA/T sites for each transcript, and output a bed file containing the polyA/T sites of transcripts. 
 // A polyA/T site is a polyA/T k-mer with at most m mismatches to the reference genome. We also require that the mismatches are not at the starting and ending base of the k-mer.
@@ -181,8 +199,9 @@ workflow prepare_data {
                                 "${projectDir}/${row.genome_path}",
                                 "${projectDir}/${row.gtf_path}")
             }
-    spliceu_ref(ref_sheet)
-    star_index_spliceu(spliceu_ref.out.spliceu_ref)
+    download_ref().collect()
+    // spliceu_ref(ref_sheet)
+    // star_index_spliceu(spliceu_ref.out.spliceu_ref)
     // split_reads(sample_sheet)
     // fastp(split_reads)
 }
