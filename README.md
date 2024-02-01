@@ -2,6 +2,8 @@
 
 This repo includes the workflow pipeline used for generating the results in the manuscript "Forseti: A mechanistic and predictive model of the splicing status of scRNA-seq reads" (link coming soon). 
 
+**To ease the future testing and validation, we have included the trained binding affinity model, and the output of the evaluation scripts in the `workflow_output` directory.** 
+
 The pipeline is implemented in Nextflow and you will need to have Nextflow installed in your system to run the pipeline. If not, please check https://www.nextflow.io/docs/latest/getstarted.html for details. The pipeline is designed to run on a SLURM cluster, but can be easily adapted to other cluster systems. 
 
 ## Introduction
@@ -11,8 +13,6 @@ This workflow can be devided into six main steps:
 3. fit the model, including training the binding affinity model (a multi-layer perceptron, MLP) for the binding affinity of oligo(dT) primer in the context of scRNA-seq, and fitting the fragment length distribution model using a cubic spline representing the distribution of the cDNA fragment length in scRNA-seq.
 4. Simulate data: we simulate reads from the _spliceu_ augmented reference generated in step 1, including sequencing reads with and without fundamental ambiguity. Here, fundamentally ambiguious reads are the reads that come from either polyA tail priming or the whole cDNA fragment arising from an exon. As a mechanistic model, Forseti is unable to distinguish between these two sources of fundamentally ambiguous reads.
 5. Evaluate Forseti on the simulated data, and the two experimental test datasets randomly selected from the processed datasets.
-
-**To ease the future testing and validation, we have included the trained binding affinity model, and the output of the evaluation scripts in the `workflow_output` directory.** 
 
 ## Running the pipeline
 To run the pipeline, we need to make sure we have Nextflow installed in your system. Then, we need to fetch the repo from GitHub using the following **shell** command:
