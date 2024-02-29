@@ -10,14 +10,14 @@ threads = as.integer(args[4])
 min_length = as.integer(args[5])
 max_mismatch = as.integer(args[6])
 
-gtf_path = "/fs/nexus-projects/sc_frag_len/nextflow/data/refs/refdata-gex-GRCh38-2020-A/genes/genes.gtf"
-genome_path = "/fs/nexus-projects/sc_frag_len/nextflow/data/refs/refdata-gex-GRCh38-2020-A/fasta/genome.fa"
-output_path = "refdata-gex-GRCh38-2020-A"
+#gtf_path = "/fs/nexus-projects/sc_frag_len/nextflow/data/refs/refdata-gex-GRCh38-2020-A/genes/genes.gtf"
+#genome_path = "/fs/nexus-projects/sc_frag_len/nextflow/data/refs/refdata-gex-GRCh38-2020-A/fasta/genome.fa"
+#output_path = "refdata-gex-GRCh38-2020-A"
 # output_path = "refdata-gex-mm10-2020-A"
-output_path = "/fs/nexus-projects/sc_frag_len/nextflow/test/build_spliceu"
-threads = 30
-min_length = 6
-max_mismatch = 0
+#output_path = "/fs/nexus-projects/sc_frag_len/nextflow/test/build_spliceu"
+#threads = 30
+#min_length = 6
+#max_mismatch = 0
 
 dir.create(output_path, showWarnings = FALSE, recursive = TRUE)
 
